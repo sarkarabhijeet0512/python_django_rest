@@ -41,3 +41,12 @@ class Products(models.Model):
     price = models.IntegerField(default=0, verbose_name="price")
     created_at = models.DateTimeField(default=timezone.now)
     modified_at = models.DateTimeField(default=timezone.now)
+
+
+def __str__(self):
+    return self
+
+
+class Meta:
+    verbose_name_plural = "Products"
+    ordering = ['-created_at']
